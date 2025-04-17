@@ -1,3 +1,3 @@
 ---
-title: "Page d'accueil"
+title: "home"
 ---

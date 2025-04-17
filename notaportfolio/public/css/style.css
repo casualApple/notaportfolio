@@ -1,44 +1,33 @@
+@import url('boska.css');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
 * {
     box-sizing: border-box;
   }
 
   :root {
-    --grain_1: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    --grain_1: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' fill='white'/%3E%3C/svg%3E");
+    --grain_2: radial-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 0), radial-gradient(rgba(0, 0, 0, 0.11) 1px, transparent 0);
+    --color_1: #0305F0;
+    --color_2: #585BFD;
+    --color_3: #151516;
+    --color_4: #FFFBEF;
   }
 html {
     height: 100%;
 }
 
 body {
-    margin: 24px;
-    height: 100vh;
+    margin: 8px;
+    height: fit-content;
     background: radial-gradient(at 30% 40%, #0305F0 0%, transparent 55%),
                 radial-gradient(at 65% 45%, #0A08D3 0%, transparent 60%),
                 radial-gradient(at 40% 65%, #0f12b3 0%, transparent 60%),
                 radial-gradient(at 55% 30%, #1A18E0 0%, transparent 60%),
                 radial-gradient(at 85% 85%, #010326 0%, transparent 85%);
-    background-color: #0305F0;
+    background-color: var(--color_1);
     background-blend-mode: screen;
-    animation: moveMesh 15s ease-in-out infinite alternate;
-}
-  
-@keyframes moveMesh {
-    0% {
-      background-position:
-        30% 40%,
-        65% 45%,
-        40% 65%,
-        55% 30%,
-        85% 85%;
-    }
-    100% {
-      background-position:
-        35% 45%,
-        60% 50%,
-        45% 60%,
-        50% 25%,
-        80% 90%;
-    }
+    background-repeat: no-repeat;
 }
 
 body::after {
@@ -50,8 +39,24 @@ body::after {
     mix-blend-mode: saturation;
     pointer-events: none;
     z-index: 1;
+    animation: grainShift 1s steps(2) infinite;
 }
-  
+
+/* responsive fonts */
+
+p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: -0.02rem;
+  line-height: 1.6;
+  color: var(--color_3);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+}
+
 .hero {
     position: relative;
     height: 100%;
@@ -61,6 +66,35 @@ body::after {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: beige;
-    border-radius: 24px;
+    background-color: var(--color_4);
+    background-image: var(--grain_2);
+    background-size: 2.7px 6px, 1px 5.4px;
+    background-position: 0 0, 1px 1px;
+    border-radius: 32px;
+}
+
+p.subtitle {
+  font-size: clamp(1.6rem, 6vw, 2rem);
+  font-weight: 300;
+  height: fit-content;
+}
+
+p.title {
+  font-size: clamp(5rem, 15vw, 18rem);
+  font-family: 'Boska-MediumItalic';
+  margin: 0;
+  height: 18rem;
+  color: var(--color_1);
+  margin-top: -6vh;
+  height: fit-content;
+}
+
+
+
+
+
+
+@keyframes grainShift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(2px, -2px); }
 }
