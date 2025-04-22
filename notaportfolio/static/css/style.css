@@ -17,6 +17,7 @@ html {
     height: 100%;
 }
 
+/* background fixed */
 body {
     margin: 8px;
     height: fit-content;
@@ -43,7 +44,6 @@ body::after {
 }
 
 /* responsive fonts */
-
 p {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: clamp(1rem, 2vw, 1.25rem);
@@ -57,7 +57,8 @@ h1 {
   font-weight: 700;
 }
 
-.hero {
+/* section head */
+div.hero {
     position: relative;
     height: 100%;
     width: 100%;
@@ -71,6 +72,7 @@ h1 {
     background-size: 2.7px 6px, 1px 5.4px;
     background-position: 0 0, 1px 1px;
     border-radius: 32px;
+    margin-bottom: 16px;
 }
 
 p.subtitle {
@@ -94,6 +96,23 @@ div.portfolio {
   content: url(/svg/portfolio.svg);
   max-width: 70vw;
   height: auto;
+}
+
+/* section portfolio */
+div.about {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color_4);
+  background-image: var(--grain_2);
+  background-size: 2.7px 6px, 1px 5.4px;
+  background-position: 0 0, 1px 1px;
+  border-radius: 32px;
 }
 
 

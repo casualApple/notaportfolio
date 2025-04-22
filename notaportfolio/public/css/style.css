@@ -57,7 +57,7 @@ h1 {
   font-weight: 700;
 }
 
-.hero {
+div.hero {
     position: relative;
     height: 100%;
     width: 100%;
@@ -71,6 +71,7 @@ h1 {
     background-size: 2.7px 6px, 1px 5.4px;
     background-position: 0 0, 1px 1px;
     border-radius: 32px;
+    margin-bottom: 16px;
 }
 
 p.subtitle {
@@ -94,6 +95,22 @@ div.portfolio {
   content: url(/svg/portfolio.svg);
   max-width: 70vw;
   height: auto;
+}
+
+div.about {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--color_4);
+  background-image: var(--grain_2);
+  background-size: 2.7px 6px, 1px 5.4px;
+  background-position: 0 0, 1px 1px;
+  border-radius: 32px;
 }
 
 
