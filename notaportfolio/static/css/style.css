@@ -133,7 +133,7 @@ div.about_content_title {
 
 div.dash {
   background-color: var(--color_1);
-  width: 33%;
+  width: 20%;
   height: 1px;
   margin-bottom: 16px;
 }
@@ -185,6 +185,7 @@ div.work {
 
 div.work_80-h {
   height: 80%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -202,35 +203,84 @@ div.work_card {
   height: 30%;
   width: 100%;
   display: flex;
-  border-radius: 8px;
+  justify-content: flex-end;
+  flex-direction: column;
+  border-radius: 24px;
   position: relative;
   background-image: url(/img/R1-05693-0015.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin-bottom: 8px;
+  padding: 8px;
+}
+
+div.card_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  height: auto;
+  width: 100%;
+  z-index: 1;
+
+}
+p.card_title {
+  height: auto;
+  width: auto;
+  max-width: 50%;
+  font-family: 'Plus Jakarta Sans';
+  font-size: clamp(1rem, 5vw, 2.4rem);
+  color: var(--color_4);
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+a.button_plus {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  background-color: var(--color_4);
+  position: relative;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+a.button_plus::after {
+  content: url(/svg/cross.svg);
+  position: absolute;
+  width: 16px;
+  height: 16px;
 }
 
 div.work_card::after {
   content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.11);
+  background-color: rgba(3, 5, 240, 0.5);
   position: absolute;
   border-radius: 24px;
+  z-index: 0;
+  top: 0;
+  left: 0;
 }
 
 div.work_card:hover::after {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(3, 5, 240, 0.3);
   transition: all ease-in-out 0.2s;
 }
 
-div.work_card:hover {
-  background-image: ;
+div.work_card:hover a.button_plus::after {
+  transform: rotate(270deg);
+  transition: ease-in-out 0.5s;
 }
 
 
-@keyframes grainShift {
+/* @keyframes grainShift {
   0% { transform: translate(0, 0); }
   100% { transform: translate(2px, -2px); }
-}
+} */
