@@ -279,6 +279,93 @@ div.work_card:hover a.button_plus::after {
   transition: ease-in-out 0.5s;
 }
 
+div.work_card_2 {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 8px;
+  border-radius: 32px;
+  background: #0305F0;
+  background: linear-gradient(0deg,rgba(3, 5, 240, 1) 25%, rgba(3, 5, 240, 0) 75%);
+  box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.2);
+}
+
+div.card_content_2 {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  & a {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 148px;
+    background-color: var(--color_4);
+    text-decoration: none;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.8);
+    border: solid 2px #ece8d9;
+    transition: all ease-in-out 0.6s;
+
+    & p {
+      line-height: 0;
+      font-family: 'Plus Jakarta Sans';
+      font-size: clamp(0.6rem, 4vw, 2.4rem);
+      color: var(--color_3);
+      font-weight: 600;
+    }
+  }
+}
+
+div.card_content_2 a:hover {
+  background-color: var(--color_3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  border: solid 2px #1b1b1b;
+
+  & p {
+    color: var(--color_4);
+  }
+}
+
+p.card_title_2 {
+  height: auto;
+  width: 100%;
+  font-family: 'Plus Jakarta Sans';
+  font-size: clamp(1rem, 4vw, 2.4rem);
+  color: var(--color_4);
+  line-height: 1;
+  margin-bottom: 8px;
+  padding: 0;
+  font-weight: 600;
+}
+
+div.card_tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+
+  & .card_tag {
+    height: auto;
+    width: auto;
+    margin-right: 4px;
+    padding: 0 8px 0 8px;
+    background-color: rgba(30,0,0, 0.8);
+    border-radius: 16px;
+
+    & p {
+      font-size: 12px;
+      color: var(--color_4);
+      font-weight: 500;
+    }
+  }
+}
+
 
 /* @keyframes grainShift {
   0% { transform: translate(0, 0); }
