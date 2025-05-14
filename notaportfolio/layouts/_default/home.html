@@ -1,114 +1,116 @@
 {{ define "main" }}
-  {{ .Content }}
-  <!-- hero -->
-    <div class="hero">
-      <div class="portfolio"></div>
-      <p class="subtitle">ceci n'est pas un portfolio</p>
-    </div>
+{{ .Content }}
+<!-- hero -->
+<div class="hero">
+  <div class="portfolio"></div>
+  <p class="subtitle">ceci n'est pas un portfolio</p>
+</div>
 
-    <!-- about -->
-    <div class="about">
-      <div class="about_80-h">
-        <div class="about_content_title">
-          <h1 class="title">neven <br>guegan</h1>
-          <span class="phonetique">[nevɛn gegã]</span>
-          <div class="dash"></div>
+<!-- about -->
+<div class="about">
+  <div class="about_content_title">
+    <h1 class="title">neven <br>guegan</h1>
+    <span class="phonetique">[nevɛn gegã]</span>
+    <div class="dash"></div>
+  </div>
+  <div class="about_content_skills">
+    <p class="skills">UI & UX design</p>
+    <p class="skills">Webdesign</p>
+    <p class="skills">D.A</p>
+    <p class="skills">Courbage de bananes</p>
+  </div>
+
+  <!-- button -->
+  <a class="button_main" href="about.html">
+    <p>about me</p>
+  </a>
+</div>
+
+<!-- work -->
+<div class="work">
+
+  <!-- projects -->
+  <div class="work_content_title">
+    <p class="title">some <br>work</h1>
+      <div class="dash"></div>
+  </div>
+
+  <!-- work highlight -->
+
+  <div class="work_card carousel_card projet_1">
+    <div class="image_container">
+      <img class="card_image" src="/img/R1-05693-0015.jpg" alt="projet1">
+    </div>
+    <div class="card_content">
+      <p class="card_title">Peugeot <br>Ferrières-en-Bray</p>
+      <div class="card_tags">
+        <div class="card_tag">
+          <p>site internet</p>
         </div>
-        <div class="about_content_skills">
-          <p class="skills">UI & UX design</p>
-          <p class="skills">Webdesign</p>
-          <p class="skills">D.A</p>
-          <p class="skills">Courbage de bananes</p>
+        <div class="card_tag">
+          <p>d.a</p>
         </div>
       </div>
-
-      <!-- button -->
-      <div class="button_redir">
-          <a href="about.html">more ➮</a>
-      </div>
-
-      <button class="button_redir"> more</button>
+      <a href="#project_1">
+        <p>see more</p>
+      </a>
     </div>
+  </div>
 
-    <!-- work -->
-    <div class="work">
-
-      <!-- projects -->
-      <div class="work_80-h">
-        <div class="work_content_title">
-          <p class="title">some <br>work</h1>
-          <div class="dash"></div>
+  <div class="work_card carousel_card projet_2">
+    <div class="image_container">
+      <img class="card_image" src="/img/R1-05693-0015.jpg" alt="projet1">
+    </div>
+    <div class="card_content">
+      <p class="card_title">TriApp</p>
+      <div class="card_tags">
+        <div class="card_tag">
+          <p>app</p>
         </div>
-
-        <!-- work highlight -->
-            <div class="work_card carousel_card projet_1">
-              <img class="card_image" src="/img/R1-05693-0015.jpg" alt="projet1">
-              <div class="card_content">
-                <p class="card_title">Peugeot Ferrières-en-Bray</p>
-                <div class="card_tags">
-                  <div class="card_tag">
-                    <p>site internet</p>
-                  </div>
-                  <div class="card_tag">
-                    <p>d.a</p>
-                  </div>
-                </div>
-                <a href="#project_1">
-                  <p>see more</p>
-                </a>
-              </div>
-            </div>
-            
-            <div class="work_card carousel_card projet_2">
-              <div class="card_content">
-                <p class="card_title">Peugeot Ferrières-en-Bray</p>
-                <div class="card_tags">
-                  <div class="card_tag">
-                    <p>site internet</p>
-                  </div>
-                  <div class="card_tag">
-                    <p>d.a</p>
-                  </div>
-                </div>
-                <a href="#project_1">
-                  <p>see more</p>
-                </a>
-              </div>
-            </div>
-
-            <div class="work_card carousel_card projet_3">
-              <div class="card_content">
-                <p class="card_title">Peugeot Ferrières-en-Bray</p>
-                <div class="card_tags">
-                  <div class="card_tag">
-                    <p>site internet</p>
-                  </div>
-                  <div class="card_tag">
-                    <p>d.a</p>
-                  </div>
-                </div>
-                <a href="#project_1">
-                  <p>see more</p>
-                </a>
-              </div>
-            </div>
-
-      <!-- button -->
-      <div class="about0-h">
-        <a href="#about" class="button_main">
-          <svg class="button_icon">
-            <use xlink:href="/svg/cross.svg"></use>
-          </svg>
-        </a>
+        <div class="card_tag">
+          <p>d.a</p>
+        </div>
+        <div class="card_tag">
+          <p>ui</p>
+        </div>
+        <div class="card_tag">
+          <p>ux</p>
+        </div>
+        <div class="card_tag">
+          <p>logo</p>
+        </div>
       </div>
+      <a href="#project_1">
+        <p>see more</p>
+      </a>
     </div>
+  </div>
 
-    <!-- contact -->
-    <div class="contact">
-      <div class="contact_current-state">
-        <p class="current_state">available for work</p>
-        <div class="contact_mail"></div>
+  <div class="work_card carousel_card projet_3">
+    <div class="image_container">
+      <img class="card_image" src="/img/R1-05693-0015.jpg" alt="projet1">
+    </div>
+    <div class="card_content">
+      <p class="card_title">Taxi & Cie</p>
+      <div class="card_tags">
+        <div class="card_tag">
+          <p>site internet</p>
+        </div>
+        <div class="card_tag">
+          <p>d.a</p>
+        </div>
+        <div class="card_tag">
+          <p>logo</p>
+        </div>
       </div>
+      <a href="#project_1">
+        <p>see more</p>
+      </a>
     </div>
+  </div>
+  <!-- button -->
+  <a class="button_main" href="about.html">
+    <p>my work</p>
+  </a>
 
-{{ end }}
+  {{ end }}
