@@ -22,28 +22,33 @@ html {
 
 /* background fixed */
 body {
-    margin: 8px;
-    height: fit-content;
-    background: radial-gradient(at 30% 40%, #0305F0 0%, transparent 55%),
-                radial-gradient(at 65% 45%, #0A08D3 0%, transparent 60%),
-                radial-gradient(at 40% 65%, #0f12b3 0%, transparent 60%),
-                radial-gradient(at 55% 30%, #1A18E0 0%, transparent 60%),
-                radial-gradient(at 85% 85%, #010326 0%, transparent 85%);
-    background-color: var(--color_1);
-    background-blend-mode: screen;
-    background-repeat: no-repeat;
+  margin: 8px;
+  height: fit-content;
+  background: radial-gradient(at 30% 40%, #0305F0 0%, transparent 55%),
+              radial-gradient(at 65% 45%, #0A08D3 0%, transparent 60%),
+              radial-gradient(at 40% 65%, #0f12b3 0%, transparent 60%),
+              radial-gradient(at 55% 30%, #1A18E0 0%, transparent 60%),
+              radial-gradient(at 85% 85%, #010326 0%, transparent 85%);
+  background-color: var(--color_1);
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  max-width: 100%;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+  position: relative;
 }
 
 body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: var(--grain_1);
-    opacity: 0.5;
-    mix-blend-mode: saturation;
-    pointer-events: none;
-    z-index: 1;
-    animation: grainShift 1s steps(2) infinite;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: var(--grain_1);
+  opacity: 0.5;
+  mix-blend-mode: saturation;
+  pointer-events: none;
+  z-index: 1;
+  animation: grainShift 1s steps(2) infinite;
 }
 
 /* responsive fonts */
@@ -396,17 +401,15 @@ div.card_tags {
 div.footer {
   display: flex;
   justify-content: center;
-  align-items: space-evenly;
+  align-items: center;
   flex-direction: column;
   padding: 16px 0;
   position: relative;
 }
 div.footer_svg {
-  content: url(/svg/portfolio.svg);
-  width: 120%;
+  content: url(/svg/footer.svg);
+  width: 110%;
   height: auto;
-  position: absolute;
-  display: inline-block;
 }
 
 ul.footer_nav {
@@ -438,6 +441,33 @@ ul.footer_nav {
       transform: translate(4px);
     }
   }
+
+div.social_media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+
+  & a.social_media_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+
+    & p {
+      font-family: 'Plus Jakarta Sans';
+      font-size: clamp(0.8rem, 3vw, 1.2rem);
+      color: var(--color_4);
+    }
+  }
+}
 
 div.footer_mentions {
   display: flex;
