@@ -5,6 +5,13 @@
 <title>home</title>
 <link rel="stylesheet" href="/css/style.css">
 <script src="/scripts/main.js"></script>
+<script>
+  if ("paintWorklet" in CSS) {
+    CSS.paintWorklet.addModule(
+      "https://www.unpkg.com/css-houdini-squircle/squircle.min.js"
+    );
+  }
+</script>
 </head>
 <body>
   <main>
@@ -61,7 +68,7 @@
           <p>d.a</p>
         </div>
       </div>
-      <a href="#project_1">
+      <a class="card_button" href="#project_1">
         <p>see more</p>
       </a>
     </div>
@@ -90,7 +97,7 @@
           <p>logo</p>
         </div>
       </div>
-      <a href="#project_1">
+      <a class="card_button" href="#project_1">
         <p>see more</p>
       </a>
     </div>
@@ -113,7 +120,7 @@
           <p>logo</p>
         </div>
       </div>
-      <a href="#project_1">
+      <a class="card_button" href="#project_1">
         <p>see more</p>
       </a>
     </div>

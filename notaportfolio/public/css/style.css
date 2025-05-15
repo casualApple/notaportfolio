@@ -48,7 +48,6 @@ body::after {
   mix-blend-mode: saturation;
   pointer-events: none;
   z-index: 1;
-  animation: grainShift 1s steps(2) infinite;
 }
 
 /* responsive fonts */
@@ -81,7 +80,8 @@ a.button_main {
   justify-content: center;
   align-items: center;
   border-radius: 48px;
-  background-color: rgba(0, 0, 0, 0);
+  background: #E4DFD0;
+  background: linear-gradient(45deg,rgba(228, 223, 208, 1) 0%, rgba(255, 251, 239, 1) 50%);
   border: solid 1px var(--color_3);
   text-decoration: none;
   transition: all ease-in-out 0.2s;
@@ -93,7 +93,7 @@ a.button_main {
   & p {
     line-height: 0;
     font-family: 'Plus Jakarta Sans';
-    font-size: clamp(0.6rem, 4vw, 2.4rem);
+    font-size: clamp(0.6rem, 4vw, 1.2rem);
     color: var(--color_3);
     font-weight: 600;
     letter-spacing: 0.8;
@@ -104,11 +104,25 @@ a.button_main {
 a.button_main:hover {
   transform: translateX(-2px) translateY(2px);
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2);
-  background-color: var(--color_3);
+  background: var(--color_3);
 
   & p {
     color: var(--color_4);
   }
+}
+
+a.button_main::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 48px;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 8px -8px 8px rgba(0, 0, 0, 0.05);
+}
+
+a.button_main:hover::after {
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.05);
 }
 
 /* section head */
@@ -324,37 +338,49 @@ div.card_content {
   z-index: 2;
   padding: 8px;
 
-  & a {
+  & a.card_button {
     width: 100%;
     height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 148px;
-    background-color: rgba(0, 0, 0, 0);
+    background: #E4DFD0;
+    background: linear-gradient(45deg,rgba(228, 223, 208, 1) 0%, rgba(255, 251, 239, 1) 50%);
     text-decoration: none;
     box-shadow: -4px 4px var(--color_1);
     border: solid 1px var(--color_1);
     transition: all ease-in-out 0.2s;
+    position: relative;
 
     & p {
       line-height: 0;
       font-family: 'Plus Jakarta Sans';
-      font-size: clamp(0.6rem, 4vw, 2.4rem);
+      font-size: clamp(0.6rem, 4vw, 1.2rem);
       color: var(--color_1);
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 }
 
-div.card_content a:hover::after {
-  top: 0;
+a.card_button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 48px;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: inset 8px -8px 8px rgba(0, 0, 0, 0.05);
 }
 
-div.card_content a:hover {
+a.card_button:hover::after {
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+div.card_content a.card_button:hover {
   transform: translateX(-2px) translateY(2px);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  background-color: var(--color_1);
+  background: var(--color_1);
+  box-shadow: 0px 0px var(--color_1);
 
   & p {
     color: var(--color_4);
