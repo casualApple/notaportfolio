@@ -125,6 +125,64 @@ a.button_main:hover::after {
   box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.05);
 }
 
+/* nav */
+/* mobile par défaut */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+}
+
+.navbar_nav {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Caché par défaut */
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease;
+}
+
+.navbar_nav.active {
+  right: 0; /* Visible quand actif */
+}
+
+/* Bouton burger */
+.navbar_burger {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar_burger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .navbar_burger {
+    display: none;
+  }
+  
+  .navbar_nav {
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    height: auto;
+    width: auto;
+  }
+}
+
 /* section head */
 div.hero {
     position: relative;
