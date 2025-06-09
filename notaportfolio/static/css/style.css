@@ -127,16 +127,15 @@ a.button_main:hover::after {
 
 /* nav */
 div.nav_container {
-  width: auto;
-  height: auto;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  position: absolute;
-  margin: 8px;
-  z-index: 999;
   max-width: 100%;
+  height: fit-content;
+  min-height: 48px;
+  right: 0;
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  padding: 8px;
 
   & button.navbar_burger:hover {
     background-color: var(--color_1);
@@ -162,6 +161,8 @@ div.nav_container {
     padding: 12px;
     position: fixed;
     transition: all ease-in-out 0.2s;
+    top: 16px;
+    right: 4vw;
 
     & span.burger_slice {
       height: 2px;
@@ -213,7 +214,7 @@ div.nav_container {
 }
 
 @media (min-width: 768px) {
-  button.navbar_burger {
+  div.nav_container nav.navbar button.navbar_burger {
     display: none;
   }
 }
