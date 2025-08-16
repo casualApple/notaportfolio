@@ -421,6 +421,7 @@ img.card_image {
   width: 100%;
   border: solid 1px var(--color_1);
   z-index: -1;
+  height: 240px;
 }
 
 div.card_content {
